@@ -1182,3 +1182,5 @@ contract2 = eth.contract(abi).at(contract.address)
 contract2.getDate()
 contract2.getPrice()
 contract2.getAddress()
+contract.address
+contract
