@@ -23,8 +23,7 @@
 			<h1 class="title">맛동산부동산</h1>
 			<nav>
 				<ul class="menu">
-					<li><a href="./main.html"class="other">메인화면</a></li>
-					<li><a href="./introduction.html" class="introduction">My Page</a></li>
+					<li><a href="sign/signin.html" class="introduction">Login</a></li>
 				</ul>
 			</nav>
 	</header>
