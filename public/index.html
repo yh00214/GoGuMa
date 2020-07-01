@@ -7,33 +7,33 @@
     </head>
     <body>
         <div class="container">
-            <form action="/contract" method="POST" id = "info">
+          <!--  <form action="/contract" method="POST" id = "info">-->
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">판매자</span>
                     </div>
-                    <input type="text" class="form-control" name = "contfrom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" id = "contfrom" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">매입자</span>
                     </div>
-                    <input type="text" class="form-control" name = "contto" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" id = "contto" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">계약일</span>
                     </div>
-                    <input type="date" class="form-control" name="date" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="date" class="form-control" id="date" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
                     </div>
-                    <input type="text" class="form-control" name = "address" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" id = "address" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
 
@@ -41,26 +41,59 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">가격</span>
                     </div>
-                    <input type="text" class="form-control" name = "price" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" id = "price" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <span class="input-group-text">설명</span>
                     </div>
-                    <textarea class="form-control" name="thing" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" id="thing" aria-label="With textarea"></textarea>
                   </div>
-                  <div class="input-group mb-3"><input type="submit" value="계약" class="btn btn-secondary" id = "contract"></div>
+                  <div class="input-group mb-3"><input type="button" value="계약" class="btn btn-secondary" id = "contract"></div>
                   
-        </form>
-
+       <!-- </form>
+       -->
         </div>
        <script>
-           $(document).ready(function(){
-               $("#contract").off("click").on("click",function(){
-                   alert("전송");
-               })
-           })
+         $(document).ready(function(){
+
+          $("#contract").off("click").on("click",function(){
+
+            console.log($("#thing").attr("value"));
+           $.ajax({
+
+                    url: "/contract",
+
+                    type: "POST",
+
+                    cache: false,
+
+                    dataType: "json",
+
+                    data: {"thing":$("#thing").attr("value"),"price":$("#price").attr("value"), "address":$("#address").attr("value"), "date":$("#date").attr("value"), "contto": $("#contto").attr("value"), "contfrom":$("#contfrom").attr("value")},
+
+                    success: function(data){
+
+                      var address = data.address;
+                      alert("계약완료 주소:"+address);
+
+                    },
+
+                    error: function (request, status, error){        
+
+
+
+                    }
+
+                    });
+
+          })
+
+
+         })
+         
+
        </script>
     </body>
 </html>
