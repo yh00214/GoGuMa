@@ -13,8 +13,12 @@
 	<% 
 	request.setCharacterEncoding("UTF-8"); 
 	
+	//ServletContext scontext = getServletContext();
+	//String realFolder = scontext.getRealPath("/");
+	//System.out.println(realFolder);
+	
 	String filename="";
-	String realFolder = "C:\\upload";
+	String realFolder = "C:\\Users\\Kim"+" " + "Doho\\eclipse-workspace\\ch01\\Goguma_web\\WebContent\\Goguma_Web\\images\\";
 	int maxSize=5*1024*1024;
 	String encType = "utf-8";
 	
@@ -38,6 +42,7 @@
 	String fname = (String) files.nextElement(); 
 	String fileName = multi.getFilesystemName(fname); 
 	
+	
 	RealEstateRepo dao = RealEstateRepo.getInstance();
 	
 	RealEstate newProduct = new RealEstate();
@@ -51,11 +56,11 @@
 	newProduct.setRegiNum(regiNum);
 	newProduct.setSize(size);
 	newProduct.setSellernum(sellernum);
-	newProduct.setHouseimage(houseimage);
-	
+	newProduct.setHouseimage(fileName);
+	System.out.println(fileName);
 	dao.addProduct(newProduct);
 	
-	response.sendRedirect("Mycontracts.jsp");
+	response.sendRedirect("myPage_renter.jsp");
 	%>
 	</body>
 	</html>

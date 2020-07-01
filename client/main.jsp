@@ -1,4 +1,10 @@
 <%@ page contentType="text/html; charset=utf-8"%> 
+<%@ page import="java.net.URLDecoder"%> 
+<%@ page import = "java.util.ArrayList"%>
+<%@ page import = "dto.RealEstate" %>
+<%@ page import = "dao.RealEstateRepo" %>
+
+<jsp:useBean id="productDAO" class = "dao.RealEstateRepo" scope = "session"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,6 +65,10 @@
 </head>
 
 <body>
+            <%
+    					RealEstateRepo dao = RealEstateRepo.getInstance();
+                    	ArrayList<RealEstate> listOfProducts = dao.getAllProducts();
+   			 %>
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
@@ -72,16 +82,23 @@
 	            <!-- Additional required wrapper -->
 	            <div class="swiper-wrapper">
 	                <!-- Slides -->
+	                <%
+            					for(int i =0; i< listOfProducts.size();i++)
+                             {
+                                   		RealEstate re = listOfProducts.get(i);
+                                   		
+                                   		
+            			%>
 	                <div class="swiper-slide">
 	                
-	                	<a href="sign/signin.html">
+	                	<a href="../Goguma_Web/detailedHouse.jsp?regiNum=<%=re.getRegiNum()%>">
 		                	<div class="card" >
 		                    <!-- ī�� ��� -->
 		                
-		                        <div class="card-header" style="background-color : white" >
+		                        <div class="card-header" style="background-color : white; background-image : url('images/<%=re.getHouseimage() %>')" >
 		                            <div class = "card-header-is_closed"  > 
 		                                <div class = "card-header-text" > 모집중 </div > 
-		                                <div class = "card-header-number" > 2 / 5 </div > 
+		                                <div class = "card-header-number" > </div > 
 		                            </div >
 		                        </div>
 		                
@@ -90,16 +107,22 @@
 		                        <div class="card-body" style="background-color : white">
 		                            <!--  ī�� �ٵ� ��� -->
 		                            <div class="card-body-header">
-		                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
-		                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
-		                                 <p class = "card-body-nickname"> 
-		                                               ㅁㅁㅁ
-		                                            </p>
-		                            </div>
-		                
-		                            <p class="card-body-description"  style="background-color : white">
-		                                    ㅁㅁㅁㅁ
+		                                <h1><%=re.getAddress() %></h1>
+                                <p class="card-body-hashtag"><%=re.getAptname() %></p>
+                                 <p class = "card-body-nickname"> 
+
+                                            </p>
+                            
+                             <p class="card-body-description"  style="background-color : white">
+		                                    <b>매매 가격</b> : <%=re.getPrice() %> <br>
+            						 <b>면적</b> : <%=re.getSize() %> <br>
+            						<b>동</b> : <%=re.getHouseDong() %> <br>
+             						<b>층</b> : <%=re.getHouseStair() %><br>
 		                            </p>
+                            </div>
+                					
+		                
+		                           
 		                
 		                            <!--  ī�� �ٵ� ���� -->
 		                
@@ -115,83 +138,10 @@
 	                    
 	                
 	                </div>
-	                <div class="swiper-slide">
-	                	<div class="card">
-	                    <!-- ī�� ��� -->
-	                
-	                        <div class="card-header" style="background-color : white" >
-	                            <div class = "card-header-is_closed"  > 
-	                                <div class = "card-header-text" > 모집중 </div > 
-	                                <div class = "card-header-number" > 2 / 5 </div > 
-	                            </div >
-	                        </div>
-	                
-	                        <!--  ī�� �ٵ� -->
-	                
-	                        <div class="card-body" style="background-color : white">
-	                            <!--  ī�� �ٵ� ��� -->
-	                            <div class="card-body-header">
-	                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
-	                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
-	                                 <p class = "card-body-nickname"> 
-	                                               ㅁㅁㅁ
-	                                            </p>
-	                            </div>
-	                
-	                            <p class="card-body-description"  style="background-color : white">
-	                                    ㅁㅁㅁㅁ
-	                            </p>
-	                
-	                            <!--  ī�� �ٵ� ���� -->
-	                
-	                            <!--  ī�� �ٵ� Ǫ�� -->
-	                
-	                            <div class="card-body-footer">
-	                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
-	                                <i class="reg_date"> 2018/04/12 </i>
-	                            </div>
-	                        </div>
-	                    </div>
-	                
-	                </div>
-	                <div class="swiper-slide">
-	                	<div class="card">
-	                    <!-- ī�� ��� -->
-	                
-	                        <div class="card-header" style="background-color : white" >
-	                            <div class = "card-header-is_closed"  > 
-	                                <div class = "card-header-text" > 모집중 </div > 
-	                                <div class = "card-header-number" > 2 / 5 </div > 
-	                            </div >
-	                        </div>
-	                
-	                        <!--  ī�� �ٵ� -->
-	                
-	                        <div class="card-body" style="background-color : white">
-	                            <!--  ī�� �ٵ� ��� -->
-	                            <div class="card-body-header">
-	                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
-	                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
-	                                 <p class = "card-body-nickname"> 
-	                                               ㅁㅁㅁ
-	                                            </p>
-	                            </div>
-	                
-	                            <p class="card-body-description"  style="background-color : white">
-	                                    ㅁㅁㅁㅁ
-	                            </p>
-	                
-	                            <!--  ī�� �ٵ� ���� -->
-	                
-	                            <!--  ī�� �ٵ� Ǫ�� -->
-	                
-	                            <div class="card-body-footer">
-	                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
-	                                <i class="reg_date"> 2018/04/12 </i>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
+	                <%
+                             }
+	                %>
+
 	                
 	            </div>
 	            <!-- If we need pagination -->
@@ -215,11 +165,11 @@
                 	<div class="card_contract">
                 		<div class="contract_content">
                 		<div class="sub_title">판매자</div>
-                		김**
+                		최**
                 		</div>
                 		<div class="contract_content">
                 		<div class="sub_title">구매자</div>
-                		강**
+                		이**
                 		</div>
                 		<div class="contract_content">
                 		
@@ -234,11 +184,11 @@
                 	<div class="card_contract">
                 		<div class="contract_content">
                 		<div class="sub_title">판매자</div>
-                		김**
+                		유**
                 		</div>
                 		<div class="contract_content">
                 		<div class="sub_title">구매자</div>
-                		강**
+                		고**
                 		</div>
                 		<div class="contract_content">
                 		
@@ -253,11 +203,11 @@
 					<div class="card_contract">
                 		<div class="contract_content">
                 		<div class="sub_title">판매자</div>
-                		김**
+                		류**
                 		</div>
                 		<div class="contract_content">
                 		<div class="sub_title">구매자</div>
-                		강**
+                		구**
                 		</div>
                 		<div class="contract_content">
                 		
@@ -272,11 +222,11 @@
                 	<div class="card_contract">
                 		<div class="contract_content">
                 		<div class="sub_title">판매자</div>
-                		김**
+                		박**
                 		</div>
                 		<div class="contract_content">
                 		<div class="sub_title">구매자</div>
-                		강**
+                		서**
                 		</div>
                 		<div class="contract_content">
                 		

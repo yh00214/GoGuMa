@@ -33,10 +33,10 @@
                 <div class="card-body">
                     <h2 class="title">매물 등록</h2>
                     
-                    <form method="POST">
+                    <form name="newProduct" action="../Goguma_Web/processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
                     <div class="row row-space">
                     	<div class="col-2">
-                    		<input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"/> 
+							<input type="file" id="houseimage" name = "houseimage" accept="image/*" onchange="setThumbnail(event);"/> 
                     		<br/>
                     		<div id="image_container"></div> 
                     		<script> 
@@ -61,7 +61,7 @@
 	                            <div class="col-2">
 	                                <div class="input-group">
 	                                    <label class="label">매물명</label>
-	                                    <input class="input--style-4" type="text" name="aptName" required>
+	                                    <input class="input--style-4" type="text" name="aptname" required>
 	                                </div>
 	                            </div>
 	                            <div class="col-2">

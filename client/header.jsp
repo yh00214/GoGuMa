@@ -31,8 +31,11 @@ li{list-style: none;}
     <header>
 			<h1 class="title">맛동산부동산</h1>
 			<nav>
+			
 				<ul class="menu">
-					<li><a href="sign/signin.html" class="introduction">Login</a></li>
+					<li><a href="../colorlib-regform-4/addRoom.html" class="introduction"><b>매물 등록</b></a></li>
+					<li><a href="../Goguma_Web/contract.html" class="introduction"><b>전자 계약</b></a></li>
+					<li><a href="sign/signin.html" class="introduction"><b>Login</b></a></li>
 				</ul>
 			</nav>
 	</header>

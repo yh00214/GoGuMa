@@ -26,7 +26,7 @@
 
         <div class="container col-8 alert alert-info"> 
     <div class="container"> 
-        <h2 class="alert alert-danger">계약이 완료되었습니다!</h2>
+        <!-- <h2 class="alert alert-danger">계약이 완료되었습니다!</h2> -->
         <h1 style = "text-align:center; margin-top : 2%;">계약 정보</h2><br>
         </div> 
         <p><b>구매자</b>       <%=request.getParameter("buyer")%><br>
