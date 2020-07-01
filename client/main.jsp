@@ -13,116 +13,316 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+  .card_contract{
+	
+   height: 100px;
+
+   width: 700px;
+
+   border-radius: 15px;
+
+   display: inline-block;
+
+   margin-top: 30px;
+
+   margin-left: 15px;
+   margin-right: 15px;
+   
+   margin-bottom: 30px;
+
+   position: relative;
+
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+   overflow: hidden;
+	background-color: white;
+}
+
+	.contract_content{
+		display: inline-block;
+		width: 220px;
+		font-family: 'Noto Sans KR', sans-serif;
+		    vertical-align: middle;
+    text-align: center;
+    padding-top: 25px; }
+		
+	.sub_title{
+		color: #83a4d4;	
+	}
+	.text_complete{
+		font-weight: bold;
+		font-size: larger;
+	}
+</style>
 </head>
 
 <body>
-	
-	<!-- 
-		Session에 login에 사용한 email 들어있음.	
-		String email = (String)session.getAttribute("email");
-		if (email != null) -> 로그인된 상태
-		else  -> 로그인 아닌 상태
-	 -->
-		
-		
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-    <header>
-			<h1 class="title">맛동산부동산</h1>
-			<nav>
-				<ul class="menu">
-					<li><a href="sign/signin.html" class="introduction">Login</a></li>
-				</ul>
-			</nav>
-	</header>
+	<jsp:include page = "header.jsp" />
 
+    <div class="div_middle" style="background: linear-gradient(45deg, #b6fbff, #cf8bf3, #fdb99b)">
+        <div class="wrapper"> <!-- 찐 바디-->
+	    <h1 class="h1_text" style="text-align: center">방찾기</h1>
+	        
+	        <div class="swiper-container swiper1">
+	            <!-- Additional required wrapper -->
+	            <div class="swiper-wrapper">
+	                <!-- Slides -->
+	                <div class="swiper-slide">
+	                
+	                	<a href="sign/signin.html">
+		                	<div class="card" >
+		                    <!-- ī�� ��� -->
+		                
+		                        <div class="card-header" style="background-color : white" >
+		                            <div class = "card-header-is_closed"  > 
+		                                <div class = "card-header-text" > 모집중 </div > 
+		                                <div class = "card-header-number" > 2 / 5 </div > 
+		                            </div >
+		                        </div>
+		                
+		                        <!--  ī�� �ٵ� -->
+		                
+		                        <div class="card-body" style="background-color : white">
+		                            <!--  ī�� �ٵ� ��� -->
+		                            <div class="card-body-header">
+		                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
+		                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
+		                                 <p class = "card-body-nickname"> 
+		                                               ㅁㅁㅁ
+		                                            </p>
+		                            </div>
+		                
+		                            <p class="card-body-description"  style="background-color : white">
+		                                    ㅁㅁㅁㅁ
+		                            </p>
+		                
+		                            <!--  ī�� �ٵ� ���� -->
+		                
+		                            <!--  ī�� �ٵ� Ǫ�� -->
+		                
+		                            <div class="card-body-footer">
+		                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+		                                <i class="reg_date"> 2018/04/12 </i>
+		                            </div>
+		                        </div>
+		                    </div>
+	                	</a>
+	                    
+	                
+	                </div>
+	                <div class="swiper-slide">
+	                	<div class="card">
+	                    <!-- ī�� ��� -->
+	                
+	                        <div class="card-header" style="background-color : white" >
+	                            <div class = "card-header-is_closed"  > 
+	                                <div class = "card-header-text" > 모집중 </div > 
+	                                <div class = "card-header-number" > 2 / 5 </div > 
+	                            </div >
+	                        </div>
+	                
+	                        <!--  ī�� �ٵ� -->
+	                
+	                        <div class="card-body" style="background-color : white">
+	                            <!--  ī�� �ٵ� ��� -->
+	                            <div class="card-body-header">
+	                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
+	                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
+	                                 <p class = "card-body-nickname"> 
+	                                               ㅁㅁㅁ
+	                                            </p>
+	                            </div>
+	                
+	                            <p class="card-body-description"  style="background-color : white">
+	                                    ㅁㅁㅁㅁ
+	                            </p>
+	                
+	                            <!--  ī�� �ٵ� ���� -->
+	                
+	                            <!--  ī�� �ٵ� Ǫ�� -->
+	                
+	                            <div class="card-body-footer">
+	                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+	                                <i class="reg_date"> 2018/04/12 </i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                
+	                </div>
+	                <div class="swiper-slide">
+	                	<div class="card">
+	                    <!-- ī�� ��� -->
+	                
+	                        <div class="card-header" style="background-color : white" >
+	                            <div class = "card-header-is_closed"  > 
+	                                <div class = "card-header-text" > 모집중 </div > 
+	                                <div class = "card-header-number" > 2 / 5 </div > 
+	                            </div >
+	                        </div>
+	                
+	                        <!--  ī�� �ٵ� -->
+	                
+	                        <div class="card-body" style="background-color : white">
+	                            <!--  ī�� �ٵ� ��� -->
+	                            <div class="card-body-header">
+	                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
+	                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
+	                                 <p class = "card-body-nickname"> 
+	                                               ㅁㅁㅁ
+	                                            </p>
+	                            </div>
+	                
+	                            <p class="card-body-description"  style="background-color : white">
+	                                    ㅁㅁㅁㅁ
+	                            </p>
+	                
+	                            <!--  ī�� �ٵ� ���� -->
+	                
+	                            <!--  ī�� �ٵ� Ǫ�� -->
+	                
+	                            <div class="card-body-footer">
+	                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+	                                <i class="reg_date"> 2018/04/12 </i>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	            </div>
+	            <!-- If we need pagination -->
+	            <div class="swiper-pagination"></div>
+	        
+	        
+	            <!-- If we need scrollbar -->
+	            <div class="swiper-scrollbar"></div>
+	        </div>
+    
+    	</div>
+    	</div>
+    	
     <div class="wrapper"> <!-- 찐 바디-->
-    
-    
-    <h1 class="h1_text">방찾기</h1>
-        
-        <div class="swiper-container swiper1">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <div class="card">
-                    <!-- ī�� ��� -->
-                
-                        <div class="card-header" >
-                            <div class = "card-header-is_closed" > 
-                                <div class = "card-header-text" > 모집중 </div > 
-                                <div class = "card-header-number" > 2 / 5 </div > 
-                            </div >
-                        </div>
-                
-                        <!--  ī�� �ٵ� -->
-                
-                        <div class="card-body">
-                            <!--  ī�� �ٵ� ��� -->
-                            <div class="card-body-header">
-                                <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
-                                <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
-                                 <p class = "card-body-nickname"> 
-                                         
-                                 </p>
-                            </div>
-                
-                            <p class="card-body-description">
-                                    ㅁㅁㅁㅁ
-                            </p>
-                
-                            <!--  ī�� �ٵ� ���� -->
-                
-                            <!--  ī�� �ٵ� Ǫ�� -->
-                
-                            <div class="card-body-footer">
-                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
-                                <i class="reg_date"> 2018/04/12 </i>
-                            </div>
-                        </div>
-                    </div></div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-    
-    
-    	<h1 class="h1_text">실시간 계약 현황</h1>
+    	<h1 class="h1_text" style="text-align: center">실시간 계약 현황</h1>
+    	
         <div class="swiper-container swiper2">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">aaa</div>
-                <div class="swiper-slide">bbb</div>
-                <div class="swiper-slide">ccc</div>
-                <div class="swiper-slide">ddd</div>
-                <div class="swiper-slide">eee</div>
+                <div class="swiper-slide">
+                	<div class="card_contract">
+                		<div class="contract_content">
+                		<div class="sub_title">판매자</div>
+                		김**
+                		</div>
+                		<div class="contract_content">
+                		<div class="sub_title">구매자</div>
+                		강**
+                		</div>
+                		<div class="contract_content">
+                		
+                		<div class="text_complete">
+                			계약 완료
+                		</div>
+                		
+                		</div>
+                	</div>
+                </div>
+                <div class="swiper-slide">
+                	<div class="card_contract">
+                		<div class="contract_content">
+                		<div class="sub_title">판매자</div>
+                		김**
+                		</div>
+                		<div class="contract_content">
+                		<div class="sub_title">구매자</div>
+                		강**
+                		</div>
+                		<div class="contract_content">
+                		
+                		<div class="text_complete">
+                			계약 완료
+                		</div>
+                		
+                		</div>
+                	</div>
+                </div>
+                <div class="swiper-slide">
+					<div class="card_contract">
+                		<div class="contract_content">
+                		<div class="sub_title">판매자</div>
+                		김**
+                		</div>
+                		<div class="contract_content">
+                		<div class="sub_title">구매자</div>
+                		강**
+                		</div>
+                		<div class="contract_content">
+                		
+                		<div class="text_complete">
+                			계약 완료
+                		</div>
+                		
+                		</div>
+                	</div>                
+                </div>
+                <div class="swiper-slide">
+                	<div class="card_contract">
+                		<div class="contract_content">
+                		<div class="sub_title">판매자</div>
+                		김**
+                		</div>
+                		<div class="contract_content">
+                		<div class="sub_title">구매자</div>
+                		강**
+                		</div>
+                		<div class="contract_content">
+                		
+                		<div class="text_complete">
+                			계약 완료
+                		</div>
+                		
+                		</div>
+                	</div>
+                </div>
+                <div class="swiper-slide">
+                	<div class="card_contract">
+                		<div class="contract_content">
+                		<div class="sub_title">판매자</div>
+                		김**
+                		</div>
+                		<div class="contract_content">
+                		<div class="sub_title">구매자</div>
+                		강**
+                		</div>
+                		<div class="contract_content">
+                		
+                		<div class="text_complete">
+                			계약 완료
+                		</div>
+                		
+                		</div>
+                	</div>
+                </div>
             </div>
         
             <!-- 페이징 -->
             <div class="swiper-pagination"></div>
         </div>
 
+   	</div>
 
-    </div>
 
+	<jsp:include page = "footer.jsp" />
+		
     <script>
         var mySwiper = new Swiper ('.swiper1', {
           // Optional parameters
           slidesPerView: 3,
         centeredSlides: true,
-        spaceBetween: 30,
+        
         loop: true,
 
           // If we need pagination
@@ -153,7 +353,7 @@
         centeredSlides: true,
         spaceBetween: 30,
             loop : true,
-            direction : 'vertical', // 무한 루프 슬라이드, 반복이 되며 슬라이드가 끝이 없다.
+            direction : 'vertical',
             pagination : {
                 el : '.swiper-pagination',
             },
