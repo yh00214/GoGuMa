@@ -16,6 +16,15 @@
 </head>
 
 <body>
+	
+	<!-- 
+		Session에 login에 사용한 email 들어있음.	
+		String email = (String)session.getAttribute("email");
+		if (email != null) -> 로그인된 상태
+		else  -> 로그인 아닌 상태
+	 -->
+		
+		
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
@@ -56,8 +65,8 @@
                                 <h1>ㅁㅁㅁㅁㅁㅁㅁ!</h1>
                                 <p class="card-body-hashtag">#ㅁㅁ #ㅁㅁ #ㅁㅁ</p>
                                  <p class = "card-body-nickname"> 
-                                               ㅁㅁㅁ
-                                            </p>
+                                         
+                                 </p>
                             </div>
                 
                             <p class="card-body-description">
