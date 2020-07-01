@@ -1,0 +1,7 @@
+@charset "EUC-KR";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.h1_text{
+	color: black; line-height: 75px; font-family: 'Noto Sans KR', sans-serif; margin: 0 auto;
+}
