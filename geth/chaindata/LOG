@@ -226,3 +226,65 @@
 20:58:29.600608 db@open done T·56.4483ms
 21:30:33.498383 db@close closing
 21:30:33.512394 db@close done T·14.0108ms
+=============== Jul 1, 2020 (KST) ===============
+23:34:44.046189 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:34:44.054169 version@stat F·[2 1] S·230KiB[152KiB 78KiB] Sc·[0.50 0.00]
+23:34:44.055167 db@open opening
+23:34:44.055167 journal@recovery F·1
+23:34:44.063145 journal@recovery recovering @51
+23:34:44.069517 memdb@flush created L0@53 N·74 S·17KiB "\x03\x1d\xf1..o\x14\xfa,v2902":"\xf9k\xf0..\xd3ە,v2904"
+23:34:44.074505 version@stat F·[3 1] S·247KiB[169KiB 78KiB] Sc·[0.75 0.00]
+23:34:44.093489 db@janitor F·6 G·0
+23:34:44.094449 db@open done T·39.2823ms
+23:35:23.889045 table@compaction L0·3 -> L1·1 S·247KiB Q·2937
+23:35:24.057594 table@build created L1@56 N·1801 S·185KiB "\x01L\x99..\xcej\xa0,v2760":"\xffj)..Q|O,v2738"
+23:35:24.057594 version@stat F·[0 1] S·185KiB[0B 185KiB] Sc·[0.00 0.00]
+23:35:24.059589 table@compaction committed F-3 S-62KiB Ke·0 D·564 T·170.5436ms
+23:35:24.060586 table@remove removed @50
+23:35:24.067567 table@remove removed @47
+23:35:24.068564 table@remove removed @46
+=============== Jul 1, 2020 (KST) ===============
+23:51:15.651887 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:51:15.659864 version@stat F·[0 1] S·185KiB[0B 185KiB] Sc·[0.00 0.00]
+23:51:15.659864 db@open opening
+23:51:15.659864 journal@recovery F·1
+23:51:15.662856 journal@recovery recovering @54
+23:51:15.670834 memdb@flush created L0@57 N·205 S·19KiB "H\x02\xa7..\xd8\x16\x8d,v2998":"r\x00\x00..cC\x95,v3137"
+23:51:15.675822 version@stat F·[1 1] S·204KiB[19KiB 185KiB] Sc·[0.25 0.00]
+23:51:15.691779 db@janitor F·5 G·1
+23:51:15.692778 db@janitor removing table-53
+23:51:15.693776 db@open done T·33.9118ms
+23:51:24.443376 db@close closing
+23:51:24.460754 db@close done T·15.0024ms
+=============== Jul 1, 2020 (KST) ===============
+23:55:05.793911 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:55:05.795907 version@stat F·[1 1] S·204KiB[19KiB 185KiB] Sc·[0.25 0.00]
+23:55:05.795907 db@open opening
+23:55:05.796903 journal@recovery F·1
+23:55:05.798934 journal@recovery recovering @58
+23:55:05.817853 memdb@flush created L0@60 N·2 S·262B "Las..ock,v3143":"Las..der,v3144"
+23:55:05.821876 version@stat F·[2 1] S·204KiB[19KiB 185KiB] Sc·[0.50 0.00]
+23:55:05.840788 db@janitor F·5 G·0
+23:55:05.840788 db@open done T·44.8819ms
+23:57:42.510324 table@compaction L0·2 -> L1·1 S·204KiB Q·3359
+23:57:42.534259 table@build created L1@63 N·1939 S·202KiB "\x01L\x99..\xcej\xa0,v2760":"\xffj)..Q|O,v2738"
+23:57:42.534259 version@stat F·[0 1] S·202KiB[0B 202KiB] Sc·[0.00 0.00]
+23:57:42.536254 table@compaction committed F-2 S-2KiB Ke·0 D·69 T·23.936ms
+23:57:42.538248 table@remove removed @57
+23:57:42.539246 table@remove removed @56
+=============== Jul 2, 2020 (KST) ===============
+00:06:02.858646 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:06:02.861636 version@stat F·[0 1] S·202KiB[0B 202KiB] Sc·[0.00 0.00]
+00:06:02.861636 db@open opening
+00:06:02.861636 journal@recovery F·1
+00:06:02.864628 journal@recovery recovering @61
+00:06:02.876595 memdb@flush created L0@64 N·412 S·23KiB "H\x04\xe2..\f~5,v3506":"r\x00\x00..\xc1\x89\x8c,v3553"
+00:06:02.880585 version@stat F·[1 1] S·225KiB[23KiB 202KiB] Sc·[0.25 0.00]
+00:06:02.900542 db@janitor F·5 G·1
+00:06:02.900542 db@janitor removing table-60
+00:06:02.901531 db@open done T·39.8954ms
+00:06:29.896318 table@compaction L0·1 -> L1·1 S·225KiB Q·3593
+00:06:29.952167 table@build created L1@67 N·2187 S·222KiB "\x01L\x99..\xcej\xa0,v2760":"\xffj)..Q|O,v2738"
+00:06:29.953164 version@stat F·[0 1] S·222KiB[0B 222KiB] Sc·[0.00 0.00]
+00:06:29.957153 table@compaction committed F-1 S-3KiB Ke·0 D·164 T·57.8474ms
+00:06:29.963137 table@remove removed @63
