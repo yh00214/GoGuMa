@@ -54,12 +54,12 @@ function construct_contract(sourceContract,res,accounts,contfrom,contto,price,ye
                 console.log('Address: ' + contract.address);
                 key_address = contract.address;
                 var c_k = web3.eth.contract(abi).at(key_address);
-                console.log("계약에 기록된 판매자: "+c_k.getcontFrom());
-                console.log("계약에 기록된 구매자: "+c_k.getcontTo());
-                console.log("계약에 기록된 계약날짜: "+c_k.getDate()['c']);
-                console.log("계약에 기록된 가격: "+c_k.getPrice()['c']);
-                console.log("계약에 기록된 주소: "+c_k.getAddress());
-                console.log("계약에 기록된 내용: "+c_k.getThing());
+                console.log("기록된 계약에서 가져온 판매자: "+c_k.getcontFrom());
+              console.log("기록된 계약에서 가져온 구매자: "+c_k.getcontTo());
+               console.log("기록된 계약에서 가져온 구매자: "+c_k.getDate()[0]['c']+"년"+c_k.getDate()[1]['c']+"월"+c_k.getDate()[2]['c']+"일");
+               console.log("기록된 계약에서 가져온 가격: "+c_k.getPrice()['c']);
+               console.log("기록된 계약에서 가져온 주소: "+c_k.getAddress());
+               console.log("기록된 계약에서 가져온 내용: "+c_k.getThing());
                 res.send(key_address);
 
                 break;
