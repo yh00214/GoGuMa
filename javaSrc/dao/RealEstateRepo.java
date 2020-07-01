@@ -24,7 +24,7 @@ public class RealEstateRepo {
 		
 		RealEstate re2 = new RealEstate("Granium", "5억","24평","대구 달서구");
 		re2.setHouseDong("101동");
-		re2.setHouseStair("3층");
+		re2.setHouseStair("13층");
 		re2.setDirection("서향");
 		re2.setPossibleDate("즉시입주가능");
 		re2.setRegiNum("34121162");
