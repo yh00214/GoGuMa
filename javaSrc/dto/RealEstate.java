@@ -17,6 +17,8 @@ public class RealEstate implements Serializable {
 	private String regiNum;
 	private String sellernum;
 	private String houseimage;
+	private double positionX;
+	private double positionY;
 	
 	public RealEstate() {
 		super();
@@ -115,6 +117,22 @@ public class RealEstate implements Serializable {
 
 	public void setHouseimage(String houseimage) {
 		this.houseimage = houseimage;
+	}
+
+	public double getPositionX() {
+		return positionX;
+	}
+
+	public void setPositionX(double positionX) {
+		this.positionX = positionX;
+	}
+
+	public double getPositionY() {
+		return positionY;
+	}
+
+	public void setPositionY(double positionY) {
+		this.positionY = positionY;
 	}
 
 
