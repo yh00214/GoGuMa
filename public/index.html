@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="/contract" method="POST" id = "info">
+           <form action="/contract" method="POST" id = "info">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">판매자</span>
@@ -19,7 +19,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">매입자</span>
                     </div>
-                    <input type="text" class="form-control" name = "contto" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" name= "contto" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
 
                   <div class="input-group mb-3">
@@ -52,15 +52,12 @@
                   </div>
                   <div class="input-group mb-3"><input type="submit" value="계약" class="btn btn-secondary" id = "contract"></div>
                   
-        </form>
-
+       </form>
+     
         </div>
        <script>
-           $(document).ready(function(){
-               $("#contract").off("click").on("click",function(){
-                   alert("전송");
-               })
-           })
+         
+
        </script>
     </body>
 </html>
