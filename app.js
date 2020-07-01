@@ -53,10 +53,8 @@ function construct_contract(sourceContract,res,accounts,contfrom,contto,price,ye
 
                 console.log('Address: ' + contract.address);
                 key_address = contract.address;
-                var c_k = web3.eth.contract(abi).at(key_address);
-                console.log(c_k.getPrice()["c"]);
                 
-                res.send(c_k);
+                res.send(key_address);
 
                 break;
        
