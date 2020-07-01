@@ -25,12 +25,30 @@
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, email);
 		pstmt.setString(2, passwd);
-		
-		
+				
 		// query 실행
 		ResultSet rs = pstmt.executeQuery();
 		
-		session.setAttribute("email", email);
+		if (rs.next() == true) {
+			session.setAttribute("email", email);
+			session.setAttribute("role", "general");
+			response.sendRedirect("main.jsp");
+			return;
+		}
+
+		sql = "SELECT RENTER_ACCOUNT.* FROM RENTER_ACCOUNT WHERE RENTER_ACCOUNT.EMAIL=? AND RENTER_ACCOUNT.PASSWD=?";
+		
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, email);
+		pstmt.setString(2, passwd);
+		
+		// query 실행
+		rs = pstmt.executeQuery();
+		if (rs.next() == true) {
+			session.setAttribute("email", email);
+			session.setAttribute("role", "renter");
+			response.sendRedirect("main.jsp");
+		}
 		
 		System.out.println("로그인 정보 조회 성공");
 	} 
@@ -41,5 +59,4 @@
 		if (conn != null) conn.close();
 	}
 	
-	response.sendRedirect("main.jsp");
 %>

@@ -5,39 +5,33 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-	
-	String name = request.getParameter("name");
+
 	String email = request.getParameter("email");
-	String passwd = request.getParameter("pass");
-	String role = request.getParameter("radio-group");
+	String contractAddr = request.getParameter("contractAddr");
+
+	System.out.println(email);
+	System.out.println(contractAddr);
 	
-	System.out.println(role);
+	// DB 처리하기
+	if (email == null) out.println("session not set error");
 	
 	Connection conn = null;	
 	PreparedStatement pstmt = null;
-	String sql;
+	
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/goguma?user=webfinal&password=webfinal");
 		
 		Statement stmt = conn.createStatement();
-		if (role == "general") {
-			System.out.println("general user");
-			sql = "INSERT INTO normal_account(name, email, passwd) VALUES(?,?,?)";
-		}
-		else {
-			System.out.println("renter user");
-			sql = "INSERT INTO renter_account(name, email, passwd) VALUES(?,?,?)";
-		}
+		String sql = "INSERT INTO table_contractaddr(email, addr) VALUES(?,?)";
 		
 		pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, name);
-		pstmt.setString(2, email);
-		pstmt.setString(3, passwd);
+		pstmt.setString(1, email);
+		pstmt.setString(2, contractAddr);
 		
 		pstmt.executeUpdate();
 		
-		out.println("INSERT account 성공");
+		out.println("INSERT contractAddr 성공");
 	} 
 	catch(SQLException ex) {
 		ex.printStackTrace();
@@ -46,5 +40,5 @@
 		if (conn != null) conn.close();
 	}
 	
-	response.sendRedirect("sign/signin.html");
+	response.sendRedirect("contract_Result.jsp");
 %>
