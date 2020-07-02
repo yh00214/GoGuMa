@@ -15,6 +15,60 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <!-- naver map api -->
 
+	<script>
+	
+	function makeChain() {
+		const xhr = new XMLHttpRequest();
+		const url = 'http://localhost:8880/contract';
+	   
+		var contfrom = $("input[name=buyer]").val();
+		var contto = $("input[name=seller]").val();
+		var date = $("input[name=contractDate]").val();
+		var address = $("input[name=address]").val();
+		var price = $("input[name=price]").val();
+		var thing = $("input[name=housename]").val();
+		thing += $("input[name=contracttype]").val();
+		
+		console.log(thing);
+			
+        const params = {
+                contfrom: contfrom,
+                contto: contto,
+                address: address,
+                price: price,
+                date: date,
+                thing: thing
+            }
+		  if(xhr) {    
+			    xhr.open('POST', url, true);
+			     // success case
+		        xhr.setRequestHeader('Content-type', 'application/json')
+			    xhr.onerror = function(){ alert('실패'); } // failure case
+			    //xhr.open (formElement.method, formElement.action, true);
+			    //xhr.onreadystatechange = handler;
+			    console.log(" before xhr.send()");
+			    //xhr.send(new FormData(formElement) );
+		        xhr.send(JSON.stringify(params)) // Make sure to stringify
+		        xhr.onload = function(){ 		        	
+		        	console.log(xhr.response); 
+		        	
+		        	$("#email").val(<%@email%>);
+		        	$("#contractAddr").val(xhr.response);
+		        	
+		        	$("#form").submit();
+		        }
+			    //xhr.send();
+			    alert("이더리움 서버에 전송되었습니다.");
+			    
+			    
+			   
+			  }
+		console.log("end cors()");
+	}
+
+	</script>
+
+
 </head>
 
 

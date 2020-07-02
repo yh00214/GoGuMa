@@ -21,7 +21,7 @@
 		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/goguma?user=webfinal&password=webfinal");
 		
 		Statement stmt = conn.createStatement();
-		if (role == "general") {
+		if (role.equals("general")) {
 			System.out.println("general user");
 			sql = "INSERT INTO normal_account(name, email, passwd) VALUES(?,?,?)";
 		}
